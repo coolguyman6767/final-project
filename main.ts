@@ -1,9 +1,9 @@
-let mySprite3: Sprite = null
-let mySprite: Sprite = null
-let mySprite2: Sprite = null
+let Bobby_Up: Sprite = null
+let Bobby_Left: Sprite = null
+let Bobby_Right: Sprite = null
 let Bobby: Sprite = null
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    mySprite3 = sprites.create(img`
+    Bobby_Up = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . f f f f . . . . . . . 
         . . . f f e e e e f f . . . . . 
@@ -22,8 +22,28 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . f f f . . . . . . . . . . 
         `, SpriteKind.Player)
 })
+controller.down.onEvent(ControllerButtonEvent.Released, function () {
+    Bobby_Up = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    mySprite = sprites.create(img`
+    Bobby_Left = sprites.create(img`
         ..............ffffff....
         .............f2feeeeff..
         ............f222feeeeff.
@@ -50,8 +70,48 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         ........................
         `, SpriteKind.Player)
 })
+controller.right.onEvent(ControllerButtonEvent.Released, function () {
+    Bobby_Right = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
+})
+controller.left.onEvent(ControllerButtonEvent.Released, function () {
+    Bobby_Left = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
+})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    mySprite2 = sprites.create(img`
+    Bobby_Right = sprites.create(img`
         ........................
         ....ffffff..............
         ..ffeeeef2f.............
@@ -76,6 +136,26 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         ........................
         ........................
         ........................
+        `, SpriteKind.Player)
+})
+controller.up.onEvent(ControllerButtonEvent.Released, function () {
+    Bobby = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
         `, SpriteKind.Player)
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
